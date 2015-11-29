@@ -288,7 +288,10 @@ bool Socket::reconnect()
 	if( !create() )
 		return false;
 
+	if ( _sd >= 0 )
+	{
 	int status = ::connect ( _sd, reinterpret_cast<sockaddr*>(&_sockaddr), sizeof ( _sockaddr ) );
+	}
 
 	if ( status == SOCKET_ERROR )
 	{
