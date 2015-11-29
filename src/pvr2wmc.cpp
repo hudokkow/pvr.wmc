@@ -45,6 +45,8 @@ Pvr2Wmc::Pvr2Wmc(void)
 	_socketClient.SetClientName(g_strClientName);
 	_socketClient.SetServerPort(g_port);
 
+	_serverBuild = 0;
+
 	_diskTotal = 0;
 	_diskUsed = 0;
 

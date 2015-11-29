@@ -43,6 +43,7 @@ Socket::Socket(const enum SocketFamily family, const enum SocketDomain domain, c
 	_domain = domain;
 	_type = type;
 	_protocol = protocol;
+  _port = 0;
 	memset (&_sockaddr, 0, sizeof( _sockaddr ) );
 	//set_non_blocking(1);  
 }
@@ -55,6 +56,7 @@ Socket::Socket()
 	_domain = pf_inet;
 	_type = sock_stream;
 	_protocol = tcp;
+  _port = 0;
 	memset (&_sockaddr, 0, sizeof( _sockaddr ) );
 }
 
